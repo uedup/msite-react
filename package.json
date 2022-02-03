@@ -29,19 +29,6 @@
     "l-build": "npm run build-css && react-scripts build",
     "l-test": "react-scripts test"
   },
-  "babel": {
-    "plugins": [
-      [
-        "@babel/plugin-proposal-decorators",
-        {
-          "legacy": true
-        }
-      ]
-    ],
-    "presets": [
-      "react-app"
-    ]
-  },
   "eslintConfig": {
     "extends": [
       "react-app",

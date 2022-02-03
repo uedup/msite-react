@@ -6,11 +6,20 @@ import './index.scss';
 @observer
 @inject('productsStore')
 class Products extends Component {
+  componentDidMount(){
+    const {getAllProducts} = this.props.productsStore;
+    getAllProducts()
+  }
+
   render(){
-    console.log(this.props)
+    // console.log(this.props)
+    const {all} = this.props.productsStore;
+    console.log(all)
     return (
       <div id="product">
-        <h2>Products</h2>
+        {all.map((item)=>{
+          return <li>{item.title}</li>
+        })}
       </div>
     )
   }
