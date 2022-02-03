@@ -1,8 +1,8 @@
 import { observable,action} from 'mobx';
 
 class CartStore {
-    @observable all =[]
-    @observable foo = 'bar'
+    @observable items =[]
+    @observable foo = 'baz'
 
     constructor(rootStore){
         this.rootStore = rootStore

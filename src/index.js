@@ -1,19 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Cart from './component/Cart';
-import Products from './component/Products';
+import App from './App';
 import { Provider} from "mobx-react";
 import RootStore from "./stores";
 import reportWebVitals from './reportWebVitals';
 
-const store = new RootStore();
-console.log(store)
 ReactDOM.render(
   <React.StrictMode>
     <Provider {...new RootStore()}>
-      <Cart/>
-      <Products/>
+      <App/>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')

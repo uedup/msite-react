@@ -1,8 +1,8 @@
 import { observable,action} from 'mobx';
 
 class ProductsStore {
-    @observable plist =[]
-    @observable bar = 'bar'
+    @observable all =[]
+    @observable foo = 'bar'
     
     constructor(rootStore){
         this.rootStore = rootStore
