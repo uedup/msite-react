@@ -1,9 +1,11 @@
+@import "../../assets/scss/color/outcolor.scss";
+
 #cart{
-    background-color: rgb(141, 224, 63);
-    a{
-        background-color: rgb(231, 104, 214);
-        &:hover{
-            background-color: rgb(81, 137, 241);
+    ol{
+        padding: 0;
+        li{
+            list-style: none;
         }
     }
+    font-size: $myFontSize;
 }

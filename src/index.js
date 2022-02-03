@@ -7,11 +7,9 @@ import RootStore from "./stores";
 
 
 ReactDOM.render(
-  <React.StrictMode>
     <Provider {...new RootStore()}>
       <App/>
-    </Provider>
-  </React.StrictMode>,
+    </Provider>,
   document.getElementById('root')
 );
 

@@ -6,8 +6,8 @@ class App extends Component {
     render(){
         return (
             <div id="header">
-                <Cart/>
                 <Products/>
+                <Cart/>
             </div>
         )
     }

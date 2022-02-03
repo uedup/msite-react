@@ -1,23 +1,27 @@
 import { observable,action} from 'mobx';
-import { getProducts} from '../api';
+import * as shop from '../api';
 
 class ProductsStore {
-    @observable all =[]
+    @observable all = []
     
     constructor(rootStore){
         this.rootStore = rootStore
     }
 
     @action.bound getAllProducts(){
-        getProducts((products)=>{
+        shop.getProducts((products)=>{
             this.setAll(products)
         })
     }
 
-    @action.bound setAll(p){
-        this.all = p
+    @action.bound setAll(products){
+        this.all = products
     }
     
+    @action.bound decrementInventory(product){
+        const prod = this.all.find(item=>item.id===product.id)
+        prod.quantity--
+    }
 }
 
 export default ProductsStore
