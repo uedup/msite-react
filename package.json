@@ -6,16 +6,28 @@
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
+    "mobx": "^5.15.7",
+    "mobx-react": "^6.3.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "5.0.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject",
+    "r-start": "react-scripts start",
+    "r-build": "react-scripts build",
+    "r-test": "react-scripts test",
+    "r-eject": "react-scripts eject",
+    "l-start-js": "react-scripts start",
+    "l-start": "npm-run-all -p watch-css l-start-js",
+    "l-build": "npm run build-css && react-scripts build",
+    "l-test": "react-scripts test"
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +46,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.16.7",
+    "customize-cra": "^1.0.0",
+    "node-sass": "^4.5.3",
+    "node-sass-chokidar": "^1.5.0",
+    "npm-run-all": "^4.1.5",
+    "react-app-rewired": "^2.1.11",
+    "sass-resources-loader": "^2.2.4"
   }
 }
