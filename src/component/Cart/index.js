@@ -7,7 +7,7 @@ import './index.scss'
 class Cart extends Component {
   render() {
     console.log(this.props)
-    return (<div id="header">
+    return (<div id="cart">
         <a href="http://www.jd.com" target="_blank" rel="noreferrer">...Cart</a> <br/>
         </div>);
   }

@@ -5,7 +5,7 @@ import Products from './component/Products';
 class App extends Component {
     render(){
         return (
-            <div id="product">
+            <div id="header">
                 <Cart/>
                 <Products/>
             </div>

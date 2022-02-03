@@ -14,9 +14,10 @@ class Products extends Component {
   render(){
     // console.log(this.props)
     const {all} = this.props.productsStore;
-    console.log(all)
+    // console.log(all)
     return (
       <div id="product">
+        ...product
         {all.map((item)=>{
           return <li>{item.title}</li>
         })}
