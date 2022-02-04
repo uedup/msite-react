@@ -1,16 +1,12 @@
-import React,{Component} from 'react';
-import Cart from './component/Cart';
-import Products from './component/Products';
+import React, { Component } from 'react'
+import Count from './component/Count' //引入的Count的容器组件
 
-class App extends Component {
-    render(){
-        return (
-            <div id="header">
-                <Products/>
-                <Cart/>
-            </div>
-        )
-    }
-  }
-  
-  export default App;
+export default class App extends Component {
+	render() {
+		return (
+			<div>
+				<Count/>
+			</div>
+		)
+	}
+}
